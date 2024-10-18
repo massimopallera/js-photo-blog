@@ -54,3 +54,17 @@ main{
     }
   }
 }
+
+
+/* ANIMATIONS */
+.my_card:hover{
+  cursor: pointer;
+  rotate: -30deg;
+  scale: 1.1;
+  z-index: 10000;
+  transition-duration: 250ms;
+
+  .pin{
+    display: none;
+  }
+}
