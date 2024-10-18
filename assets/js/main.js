@@ -15,7 +15,7 @@ axios.get(url)
     const {title, url} = element
 
     const markup = `
-    <div class="my_col-3">
+    <div class="my_col-3 my_col-md-6 my_col-sm-12">
       <div class="my_card my_shadow p-4">
 
         <img src="./assets/img/pin.svg" width="40" alt="" class="pin">

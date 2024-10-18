@@ -3,6 +3,8 @@
 body{
   font-family: "edu Tas Beginner";
   background-image: url('../img/cork.png');
+
+  overflow-x: hidden;
 }
 
 
@@ -34,6 +36,8 @@ main{
   padding-top: 4rem;
 
   .my_card{
+    text-transform: capitalize;
+
     position: relative;
     background: #FFF;
     height: 100%;
@@ -46,11 +50,6 @@ main{
   
     .card-img{
       width: 100%;
-      /* height: auto; */
-    }
-  
-    .card-body{
-      font-style: italic;
     }
   }
 }
@@ -66,5 +65,28 @@ main{
 
   .pin{
     display: none;
+  }
+}
+
+@media screen and (max-width:991px) {
+  .my_col-md-6{
+    width: calc((100% / 12) * 5);
+  }
+}
+@media screen and (max-width:767px) {
+  .my_col-sm-12{
+    width: 100%;
+  }
+  header{
+    padding-left: 0;
+    padding-right: 0;
+    
+    h1{
+      font-size: 3rem;
+    }
+  }
+  main{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
