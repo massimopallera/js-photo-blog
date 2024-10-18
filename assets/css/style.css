@@ -1,43 +1,56 @@
 
-/* debug */
-.debug{
-  main{
-    background-image: url('../img/cork.png');
-    padding-top: 1rem;
-  }
+/* commons */
+body{
+  font-family: "edu Tas Beginner";
+  background-image: url('../img/cork.png');
 }
+
+
+/* my utilities */
+.my_col-3{
+  width: calc((100% / 12) *3);
+}
+
+.my_shadow{
+  box-shadow: 1px 1px 4px 1px #3b3b3bd2;
+}
+
+
 
 header{
   background-image: url('../img/wall.png');
   padding: 2rem;
   text-align: center;
   text-transform: uppercase;
-  font-style: italic;
-}
-
-.my_card{
-  position: relative;
-  background: #FFF;
-  /* height: 30vh; */
-
-  .pin{
-    position: absolute;
-    top: .7rem;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  }
-
-  .card-img{
-    width: 100%;
-    height: auto;
-  }
-
-  .card-body{
+  
+  h1{
+    font-size: 4rem;
     font-style: italic;
+    font-family: "Sometype Mono",monospace;
   }
 }
 
+main{
+  padding-top: 4rem;
 
-.my_col-3{
-  width: calc((100% / 12) *3);
+  .my_card{
+    position: relative;
+    background: #FFF;
+    height: 100%;
+    .pin{
+      position: absolute;
+      top: .7rem;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  
+    .card-img{
+      width: 100%;
+      /* height: auto; */
+    }
+  
+    .card-body{
+      font-style: italic;
+    }
+  }
 }
