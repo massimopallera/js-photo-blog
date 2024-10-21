@@ -2,8 +2,8 @@
 //📌 DOM elements
 const rowEl = document.querySelector('.row')
 const overlayEl = document.querySelector('.overlay')
-const btnEl = document.querySelector('.overlay > button')
-const imgOverlayEl = document.querySelector('.overlay > img')
+const btnEl = document.querySelector('.overlay button')
+const imgOverlayEl = document.querySelector('.overlay img')
 let cardEl;
 let imgEl;
 
@@ -40,12 +40,6 @@ function generateMarkup(title, url){
   `
 }
 
-function generateOverlayMarkup(url){
-  return `
-    <img src="${url}" alt="" class="card-img">
-  `
-}
-
 
 btnEl.addEventListener('click', function(){
   overlayEl.classList.add('d_none')
@@ -73,10 +67,9 @@ axios.get(url)
 
       imgEl = card.querySelector('.card-img')
       
-      overlayEl.classList.remove('d_none')
+      overlayEl.classList.remove('d_none') //remove d_none class from overlay
 
-      //print image in overlay
-      imgOverlayEl.src = imgEl.src
+      imgOverlayEl.src = imgEl.src //change img source of overlay with source of the img clicked
 
       
     }))
