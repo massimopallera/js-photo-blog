@@ -107,7 +107,7 @@ main{
 }
 
 .d_none{
-  /* display: ; */
+  display: none;
 }
 
 .overlay{
@@ -128,6 +128,7 @@ main{
     display: flex;
     flex-direction: column;
 
+    margin: auto;
     align-items: center;
     gap: 2rem;
   }
