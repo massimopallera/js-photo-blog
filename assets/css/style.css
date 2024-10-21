@@ -58,10 +58,14 @@ main{
 /* ANIMATIONS */
 .my_card:hover{
   cursor: pointer;
-  rotate: -20deg;
+  rotate: -10deg;
   scale: 1.1;
-  z-index: 10000;
+  z-index: 10;
   transition-duration: 250ms;
+
+  &.my_shadow{
+    box-shadow: 1px 1px 5px 3px #3d3d3dd2;
+  }
 
   .pin{
     display: none;
@@ -99,5 +103,28 @@ main{
   main{
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+
+
+.overlay{
+  height: 100vh;
+  width: 100vw;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  overflow: hidden;
+  background: #000000af;
+  z-index: 100000;
+
+  *{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
   }
 }

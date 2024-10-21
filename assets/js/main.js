@@ -21,7 +21,7 @@ const url = uri+queryString //URL
 function generateMarkup(title, url){
   return `
   <div class="my_col-3 my_col-md-6 my_col-sm-12">
-    <div class="my_card my_shadow p-4">
+    <div class="my_card my_shadow p-3">
 
       <img src="./assets/img/pin.svg" width="40" alt="" class="pin">
       <img src="${url}" alt="" class="card-img">
