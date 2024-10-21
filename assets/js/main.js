@@ -1,6 +1,9 @@
 
 //📌 DOM elements
 const rowEl = document.querySelector('.row')
+const overlayEl = document.querySelector('.overlay')
+let cardEl;
+let imgEl;
 
 //📌Variables
 const n = 6
@@ -52,6 +55,18 @@ axios.get(url)
     const markup = generateMarkup(title,  url) //to generate the markup
 
     rowEl.innerHTML += markup //add markup to html
+
+    cardEl = rowEl.querySelectorAll('.my_card')
+
+    cardEl.forEach(card => card.addEventListener('click', function(){
+
+      imgEl = card.querySelector('.card-img')
+      console.log(overlayEl);
+      
+      overlayEl.classList.remove('d_none')
+
+
+    }))
 
   });
 
