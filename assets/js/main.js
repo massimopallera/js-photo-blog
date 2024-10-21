@@ -2,6 +2,8 @@
 //📌 DOM elements
 const rowEl = document.querySelector('.row')
 const overlayEl = document.querySelector('.overlay')
+const btnEl = document.querySelector('.overlay > button')
+const imgOverlayEl = document.querySelector('.overlay > img')
 let cardEl;
 let imgEl;
 
@@ -38,7 +40,16 @@ function generateMarkup(title, url){
   `
 }
 
+function generateOverlayMarkup(url){
+  return `
+    <img src="${url}" alt="" class="card-img">
+  `
+}
 
+
+btnEl.addEventListener('click', function(){
+  overlayEl.classList.add('d_none')
+})
 
 //📌AJAX with Axios
 axios.get(url)
@@ -61,11 +72,13 @@ axios.get(url)
     cardEl.forEach(card => card.addEventListener('click', function(){
 
       imgEl = card.querySelector('.card-img')
-      console.log(overlayEl);
       
       overlayEl.classList.remove('d_none')
 
+      //print image in overlay
+      imgOverlayEl.src = imgEl.src
 
+      
     }))
 
   });
